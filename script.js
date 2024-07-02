@@ -19,7 +19,7 @@ function calculateGPA() {
     let grades = document.getElementsByClassName('grade');
     let credits = document.getElementsByClassName('credits');
     let Points = 0;
-    let totalCredits = 0;
+    let Credits = 0;
 
     for (let i = 0; i < grades.length; i++) {
         let grade = grades[i].value.toUpperCase();
