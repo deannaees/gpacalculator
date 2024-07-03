@@ -18,18 +18,18 @@ function addCourse() {
 function calculateGPA() {
     let grades = document.getElementsByClassName('grade');
     let credits = document.getElementsByClassName('credits');
-    let Points = 0;
-    let Credits = 0;
+    let totalPoints = 0;
+    let totalCredits = 0;
 
     for (let i = 0; i < grades.length; i++) {
         let grade = grades[i].value.toUpperCase();
         let credit = parseFloat(credits[i].value);
 
-        Credits += credit;
-        Points += gradeToPoints(grade) * credit;
+        totalCredits += credit;
+        totalPoints += gradeToPoints(grade) * credit;
     }
 
-    let gpa = Points / Credits;
+    let gpa = totalPoints / totalCredits;
     document.getElementById('result').innerText = `Final GPA: ${gpa}`;
 }
 function gradeToPoints(grade) {
